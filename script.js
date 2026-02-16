@@ -77,7 +77,7 @@ function setupFormulario() {
             );
             
             // Redirecionar para WhatsApp
-            window.open(`https://wa.me/5511999999999?text=${mensagemWhatsApp}`, '_blank');
+            window.open(`https://wa.me/5543996464439?text=${mensagemWhatsApp}`, '_blank');
             
             // Limpar formulário
             form.reset();
@@ -96,7 +96,7 @@ function setupFormulario() {
                 valor = valor.slice(0, 11);
             }
             
-            // Formatar como (11) 99999-9999
+            // Formatar como (43) 99646-4439
             if (valor.length <= 2) {
                 e.target.value = valor;
             } else if (valor.length <= 6) {
