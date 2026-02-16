@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciana Silva - Agendamentos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5543996464439?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20Luciana%20Silva" 
+       class="whatsapp-button" target="_blank" title="Enviar mensagem via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Luciana Silva</h1>
+                    <p>Agendamentos Online</p>
+                </div>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#localizacao" class="nav-link">Localização</a>
+                <a href="#agendamento" class="nav-link">Agendar</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Bem-vinda ao seu espaço de bem-estar</h2>
+            <p>Agende seu atendimento conosco e desfrute de uma experiência única</p>
+            <a href="#agendamento" class="btn-primary">Agendar Agora</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <i class="fas fa-massage"></i>
+                    <h3>Massagem Terapêutica</h3>
+                    <p>Relaxe e renove suas energias com nossa massagem profissional</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Tratamento Natural</h3>
+                    <p>Produtos naturais para sua pele e bem-estar</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Wellness</h3>
+                    <p>Cuide de sua saúde mental e física</p>
+                </div>
+                <div class="servico-card">
+                    <i class="fas fa-hands"></i>
+                    <h3>Terapia Holística</h3>
+                    <p>Equilibre corpo, mente e espírito</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Mapa -->
+    <section id="localizacao" class="localizacao">
+        <div class="container">
+            <h2 class="section-title">Nossa Localização</h2>
+            <div class="localizacao-content">
+                <div class="mapa-container">
+                    <div id="mapa" class="mapa"></div>
+                </div>
+                <div class="info-localizacao">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua Piauí, 106 - Sala 6<br>Centro, Londrina - PR<br>CEP: 86010-420</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p><a href="tel:+5543996464439">(43) 99646-4439</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:contato@lucianasilva.com">contato@lucianasilva.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Seg-Sex: 9h às 18h<br>Sábado: 9h às 14h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Agendamento -->
+    <section id="agendamento" class="agendamento">
+        <div class="container">
+            <h2 class="section-title">Faça seu Agendamento</h2>
+            <form class="formulario-agendamento" id="formAgendamento">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="servico">Serviço *</label>
+                        <select id="servico" name="servico" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="massagem">Massagem Terapêutica</option>
+                            <option value="tratamento">Tratamento Natural</option>
+                            <option value="wellness">Wellness</option>
+                            <option value="terapia">Terapia Holística</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data *</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Hora *</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem (Opcional)</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Deixe aqui alguma observação importante..."></textarea>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacidade" name="privacidade" required>
+                    <label for="privacidade">Concordo com a política de privacidade</label>
+                </div>
+
+                <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contato-content">
+                <p>Tem dúvidas? Entre em contato conosco através dos canais abaixo:</p>
+                <div class="contato-botoes">
+                    <a href="https://wa.me/5543996464439?text=Olá!%20Gostaria%20de%20agendar%20um%20atendimento%20com%20Luciana%20Silva" 
+                       class="btn-contato whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="tel:+5543996464439" class="btn-contato telefone">
+                        <i class="fas fa-phone"></i> Ligar
+                    </a>
+                    <a href="mailto:contato@lucianasilva.com" class="btn-contato email">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Luciana Silva. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> para seu bem-estar</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

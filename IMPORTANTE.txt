@@ -1,0 +1,187 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║           SITE DE AGENDAMENTO - LUCIANA SILVA                              ║
+║              Instruções de Personalização Rápida                            ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+📌 ALTERAÇÕES IMPORTANTES - FAÇA ISTO PRIMEIRO!
+
+1. NÚMERO DE WHATSAPP
+   Local: index.html
+   Procure por: 5511999999999
+   Substitua por: seu número (55 + DDD + número, sem traços)
+   
+   ⚠️ Locais onde aparece:
+   - Botão WhatsApp flutuante (linha ~23)
+   - Seção Localização (linha ~92)
+   - Seção Contato (linha ~158)
+   - Script (linha ~97)
+
+2. TELEFONE
+   Local: index.html
+   Procure por: (11) 99999-9999
+   Substitua por: seu telefone
+   
+   ⚠️ Locais:
+   - Seção Localização (linha ~90)
+   - Seção Contato (formulário)
+
+3. EMAIL
+   Local: index.html
+   Procure por: contato@lucianasilva.com
+   Substitua por: seu email
+   
+   ⚠️ Locais:
+   - Seção Localização (linha ~94)
+   - Seção Contato (linha ~161)
+
+4. ENDEREÇO
+   Local: index.html
+   Procure por: "Rua das Flores, 123"
+   Substitua por: seu endereço
+   
+   Procure por: "São Paulo - SP"
+   Substitua por: sua cidade/estado
+
+5. LOCALIZAÇÃO DO MAPA
+   Local: script.js (linhas ~11-13)
+   
+   Encontre:
+   const latitudePadrao = -23.5505;
+   const longitudePadrao = -46.6333;
+   
+   Substitua pelas coordenadas do seu local:
+   - Google Maps: clique direito no lugar → coordenadas
+   - Ou visite: https://www.google.com/maps
+   - Pegue a latitude e longitude
+
+6. LOGO
+   Local: index.html (linha ~72)
+   
+   Atualmente: <i class="fas fa-spa"></i> (ícone de spa)
+   
+   Opção 1 - Trocar ícone:
+   Mude para outro ícone Font Awesome:
+   - <i class="fas fa-heart"></i> (coração)
+   - <i class="fas fa-flower"></i> (flor)
+   - <i class="fas fa-star"></i> (estrela)
+   
+   Opção 2 - Usar imagem PNG/JPG:
+   Crie pasta "assets" e adicione sua logo.png
+   Substitua por: <img src="assets/logo.png" alt="Logo">
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎨 PERSONALIZAR CORES (Opcional)
+
+Local: styles.css (primeiras 10 linhas)
+
+Cores atuais (Rosa e Branco):
+--primary-pink: #E91E63      (Rosa forte)
+--light-pink: #F48FB1        (Rosa claro)
+--pale-pink: #FCE4EC         (Rosa muito claro)
+
+Para trocar cores:
+1. Abra styles.css
+2. Localize a seção :root { ... }
+3. Substitua os valores HEX
+
+Paletas sugeridas:
+- Roxo: #9C27B0, #CE93D8, #F3E5F5
+- Azul: #2196F3, #90CAF9, #E3F2FD
+- Verde: #4CAF50, #A5D6A7, #E8F5E9
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 SERVIÇOS (Personalizar cardápios)
+
+Local: index.html (linhas ~106-125)
+
+Cada card pode ser editado:
+- Ícone (use Font Awesome)
+- Título
+- Descrição
+- Opções de serviços no formulário (linhas ~214-219)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏰ HORÁRIO DE FUNCIONAMENTO
+
+Local: index.html (linha ~94)
+
+Altere "Seg-Sex: 9h às 18h" e "Sábado: 9h às 14h" 
+para seus horários reais
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ CHECKLIST DE CONFIGURAÇÃO
+
+☐ Alterar número WhatsApp (IMPORTANTE!)
+☐ Alterar telefone
+☐ Alterar email
+☐ Alterar endereço
+☐ Alterar localização do mapa
+☐ Adicionar/Mudar logo
+☐ Verificar serviços
+☐ Verificar cores
+☐ Testar links (WhatsApp, telefone, email)
+☐ Testar no celular (responsive)
+☐ Testar no navegador
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 COMO TESTAR
+
+1. Abra index.html no navegador
+2. Clique no botão WhatsApp flutuante
+3. Preencha o formulário e clique "Confirmar Agendamento"
+4. Verifique se redireciona para WhatsApp corretamente
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 DEIXAR SITE ONLINE (Próximos passos)
+
+1. Compre domínio (godaddy.com, namecheap.com, etc)
+2. Hospede em servidor (netlify.com, vercel.com, AWS, etc)
+3. Configure DNS apontando para seu servidor
+4. Adicione certificado SSL (HTTPS)
+
+Opção grátis e fácil:
+- Vercel.com (FREE) - conecta ao GitHub
+- Netlify.com (FREE) - drag and drop
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❓ DÚVIDAS COMUNS
+
+P: Como encontro as coordenadas do mapa?
+R: Google Maps → clique no local → aparece latitude/longitude
+
+P: Como adiciono mais serviços?
+R: Duplique um <div class="servico-card"> e edite as informações
+
+P: Posso trocar a cor rosa?
+R: Sim! Edite as variáveis em styles.css
+
+P: Como adiciono fotos?
+R: Crie pasta "assets" e adicione com <img src="assets/foto.jpg">
+
+P: Como deixo o site no ar?
+R: Use Netlify ou Vercel (grátis)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 FORMATO DO WHATSAPP
+
+Seu número deve ser: 55 + DDD + NÚMERO
+Exemplo: 5511987654321
+
+Não use:
+- Espaços
+- Traços
+- Parênteses
+- Zeros desnecessários
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Desenvolvido com ❤️ para seu bem-estar!
+Data: 16/02/2026
